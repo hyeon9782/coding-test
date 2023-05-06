@@ -11,7 +11,3 @@ for (let i = 1; i <= testCase; i++){
     }
     console.log(result)
 }
-
-
-
-

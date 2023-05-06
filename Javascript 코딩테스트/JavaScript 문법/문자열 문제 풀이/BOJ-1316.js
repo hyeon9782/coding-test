@@ -1,8 +1,6 @@
 let fs = require("fs");
 let input = fs.readFileSync("/dev/stdin").toString().split("\n");
 
-// const input1 = [3, "aba", "abab", "abcabc", "a"]
-
 let n = Number(input[0]);
 let summary = 0;
 for (let i = 1; i <= n; i++) {
