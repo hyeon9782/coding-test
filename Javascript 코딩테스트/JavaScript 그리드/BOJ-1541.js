@@ -10,4 +10,4 @@ for (let i = 0; i < groups.length; i++) {
     if (i == 0) answer += cur; // 첫 번째 그룹은 항상 덧셈(+)
     else answer -= cur; // 두 번째 그룹부터 뺄셈(-)
 }
-console.log(answer);
+console.log(answer); 
