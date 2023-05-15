@@ -1,31 +1,25 @@
-const input = ["6"]
+// const input = ["18"]
 
-// let fs = require("fs");
-// let input = fs.readFileSync("/dev/stdin").toString().split("\n");
+let fs = require("fs");
+let input = fs.readFileSync("/dev/stdin").toString().split("\n");
 
-const kg = Number(input[0]);
+let n = Number(input[0]);
+let flag = false;
+let cnt = 0;
 
-let num = 0;
-let rest = kg;
-
-const arr = [5 , 3]
-
-arr.forEach(item => {
-    if (rest / item >= 1 && ) {
-        num += Math.floor(rest / item);
-        
-        rest -= item * Math.floor(rest / item);
-
-        console.log(rest);
-    }   
-})
-
-for(let i=0; i < 2; i++){
-    if ()
+while (n >= 0) { // 더 이상 반복할 수 없을 때까지 반복
+    // n이 0이 되었거나, 5로 나누어 떨어지는 값인 경우
+    if (n == 0 || n % 5 === 0) {
+        cnt += parseInt(n / 5); // 5로 나눈 몫을 더하기
+        console.log(cnt);
+        flag = true;
+        break;
+    }
+    n -= 3;
+    cnt += 1;
 }
 
-// 3kg 와 5kg의 봉지를 가지고 있다
-// 설탕 N kg을 최대한 적은 봉지를 사용하여 배달해야한다.
-// 6kg을 받으면 5kg 1개 쓰고 1kg이 남
+if (!flag) {
+    console.log(-1)
+}
 
-console.log(rest === 0 ? num : -1);
